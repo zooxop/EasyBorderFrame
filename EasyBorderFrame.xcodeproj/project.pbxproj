@@ -11,6 +11,7 @@
 		DB7DAFB929D45258000F8065 /* BorderFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DAFB829D45258000F8065 /* BorderFrameView.swift */; };
 		DB7DAFBB29D45259000F8065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB7DAFBA29D45259000F8065 /* Assets.xcassets */; };
 		DB7DAFBE29D45259000F8065 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB7DAFBD29D45259000F8065 /* Preview Assets.xcassets */; };
+		DBC2687429DB950400594E39 /* EmptyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBC2687329DB950400594E39 /* EmptyViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		DB7DAFBA29D45259000F8065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB7DAFBD29D45259000F8065 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DB7DAFBF29D45259000F8065 /* EasyBorderFrame.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EasyBorderFrame.entitlements; sourceTree = "<group>"; };
+		DBC2687329DB950400594E39 /* EmptyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +54,7 @@
 		DB7DAFB529D45258000F8065 /* EasyBorderFrame */ = {
 			isa = PBXGroup;
 			children = (
-				DB7DAFC629D480BF000F8065 /* ViewModel */,
+				DBC2687229DB94E700594E39 /* ViewModel */,
 				DB7DAFC529D480B6000F8065 /* View */,
 				DB7DAFB629D45258000F8065 /* EasyBorderFrameApp.swift */,
 				DB7DAFBA29D45259000F8065 /* Assets.xcassets */,
@@ -78,9 +80,10 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		DB7DAFC629D480BF000F8065 /* ViewModel */ = {
+		DBC2687229DB94E700594E39 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				DBC2687329DB950400594E39 /* EmptyViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DBC2687429DB950400594E39 /* EmptyViewModel.swift in Sources */,
 				DB7DAFB929D45258000F8065 /* BorderFrameView.swift in Sources */,
 				DB7DAFB729D45258000F8065 /* EasyBorderFrameApp.swift in Sources */,
 			);
