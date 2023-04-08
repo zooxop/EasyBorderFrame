@@ -8,17 +8,32 @@
 import SwiftUI
 
 struct BorderFrameView: View {
-    
+    @State var imageClipboard: NSImage?
     @State var isHover: Bool = false
     
     var body: some View {
         GeometryReader { geometry in
             VStack {
-                Image(systemName: "photo.artframe")
-                    .resizable()
-                    .foregroundColor(.green)
-                    .scaledToFit()
-                    .padding(.top, 5)
+                ZStack {
+                    Color.gray
+                        .opacity(0.2)
+                        .ignoresSafeArea()
+                    
+                    if let image = imageClipboard {
+                        Image(nsImage: image)
+                            .resizable()
+                            .foregroundColor(.green)
+                            .scaledToFit()
+                    } else {
+                        Image(systemName: "photo.artframe")
+                            .resizable()
+                            .foregroundColor(.green)
+                            .scaledToFit()
+                    }
+                }
+                .frame(width: 300, height: 250)
+                .padding(.top, 5)
+                
                 
                 Button {
                     
@@ -47,6 +62,13 @@ struct BorderFrameView: View {
             .background(Color.white)
         }
         .frame(width: 300, height: 500)
+        .onAppear {
+            let pasteboard = NSPasteboard.general
+            if let data = pasteboard.data(forType: .tiff),
+               let image = NSImage(data: data) {
+                self.imageClipboard = image
+            }
+        }
     }
 }
 
