@@ -6,6 +6,9 @@
 //
 
 import SwiftUI
+import SwiftyBeaver
+
+let log = SwiftyBeaver.self
 
 struct BorderFrameView: View {
     @State var imageClipboard: NSImage?
@@ -36,7 +39,7 @@ struct BorderFrameView: View {
                 
                 
                 Button {
-                    
+                    SwiftyBeaver.info("Log Test")
                 } label: {
                     Text("Copy to Clip board")
                         .frame(maxWidth: geometry.size.width - 10, maxHeight: 40)
@@ -68,6 +71,18 @@ struct BorderFrameView: View {
                let image = NSImage(data: data) {
                 self.imageClipboard = image
             }
+            let file = FileDestination()
+
+            let url = try? FileManager.default.url(for: .documentDirectory,
+                                                   in: .userDomainMask,
+                                                   appropriateFor: nil,
+                                                   create: true)
+
+            let fileURL = url?.appendingPathComponent("SwiftyDebug.log")
+
+            file.logFileURL = fileURL
+
+            log.addDestination(file)
         }
     }
 }

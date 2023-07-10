@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB00AA902A5B8743004C9FD5 /* SwiftyBeaver in Frameworks */ = {isa = PBXBuildFile; productRef = DB00AA8F2A5B8743004C9FD5 /* SwiftyBeaver */; };
 		DB7DAFB729D45258000F8065 /* EasyBorderFrameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DAFB629D45258000F8065 /* EasyBorderFrameApp.swift */; };
 		DB7DAFB929D45258000F8065 /* BorderFrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB7DAFB829D45258000F8065 /* BorderFrameView.swift */; };
 		DB7DAFBB29D45259000F8065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB7DAFBA29D45259000F8065 /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB00AA902A5B8743004C9FD5 /* SwiftyBeaver in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +106,9 @@
 			dependencies = (
 			);
 			name = EasyBorderFrame;
+			packageProductDependencies = (
+				DB00AA8F2A5B8743004C9FD5 /* SwiftyBeaver */,
+			);
 			productName = EasyBorderFrame;
 			productReference = DB7DAFB329D45258000F8065 /* EasyBorderFrame.app */;
 			productType = "com.apple.product-type.application";
@@ -132,6 +137,9 @@
 				Base,
 			);
 			mainGroup = DB7DAFAA29D45258000F8065;
+			packageReferences = (
+				DB00AA8E2A5B8743004C9FD5 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */,
+			);
 			productRefGroup = DB7DAFB429D45258000F8065 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -362,6 +370,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DB00AA8E2A5B8743004C9FD5 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyBeaver/SwiftyBeaver.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DB00AA8F2A5B8743004C9FD5 /* SwiftyBeaver */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DB00AA8E2A5B8743004C9FD5 /* XCRemoteSwiftPackageReference "SwiftyBeaver" */;
+			productName = SwiftyBeaver;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DB7DAFAB29D45258000F8065 /* Project object */;
 }
